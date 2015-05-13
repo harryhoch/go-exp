@@ -1,0 +1,14 @@
+* GO Experiments
+
+The purpose of this repo is to be testing ground and sandbox for ideas
+that have an extremely short lifespan. Think pipeline or concept
+demos, or something temporarily needed for a demonstration at a meeting.
+
+Individual experimental projects live in subdirectories and should be
+self-contained (unless that is part of the test).
+
+** widget
+
+   This is an experiment in using a gulp, npm, and other tools in
+   creating and distributing a self-contained JavaScript widget that
+   can be consumed by third-parties.
