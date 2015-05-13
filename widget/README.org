@@ -1,0 +1,13 @@
+* Overview
+
+  This widget is a trial at self-contained widgets for
+  https://github.com/geneontology/noctua/issues/119 and
+  https://github.com/monarch-initiative/monarch-app/issues/665
+  .
+
+* Reading list
+
+  On the functioning of CommonJS:
+
+  https://github.com/substack/browserify-handbook#require
+  https://github.com/substack/browserify-handbook#exports

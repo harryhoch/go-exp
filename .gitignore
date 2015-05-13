@@ -1,8 +1,11 @@
 ## Do not make earlier mistakes with documentation.
-doc
-!doc/README.org
+# root
+/doc
+#!/doc/README.org
+/widget/doc
+!/widget/doc/README.org
 
-## Node modules are handled by "npm install" and out package.json
+## Node modules are handled by "npm install" and out of package.json
 node_modules
 
 ## Do not commit our TAGS
