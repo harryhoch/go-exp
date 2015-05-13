@@ -3,15 +3,17 @@
 ////
 
 var gulp = require('gulp');
-var jsdoc = require("gulp-jsdoc");
+var jsdoc = require('gulp-jsdoc');
 var mocha = require('gulp-mocha');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
-var git = require("gulp-git");
-var bump = require("gulp-bump");
+var git = require('gulp-git');
+var bump = require('gulp-bump');
 var del = require('del');
+var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass');
 
 var paths = {
     // tests: ['tests/*.test.js'],
