@@ -7,7 +7,8 @@ jQuery using widget) using npm + gulp + browserify.
 
   : npm install
   : node
-  : var g = require('go-exp-widget');
+  : var widget = require('go-exp-widget');
+  : var g = new widget();
   : g.skelter(['oi', 'boy']);
 
 ** As browser client
