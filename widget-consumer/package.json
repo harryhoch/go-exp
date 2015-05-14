@@ -30,7 +30,7 @@
         "chai": "^2.3.0",
         "del": "^1.1.1",
         "express": "3.4.6",
-        "go-exp-widget": "*",
+        "go-exp-widget": "latest",
         "gulp": "^3.8.11",
         "gulp-bump": "^0.3.0",
         "gulp-git": "^1.2.3",
