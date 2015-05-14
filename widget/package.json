@@ -4,14 +4,12 @@
     "license": "BSD",
     "description": "Experimental test widget for the Gene Ontology.",
     "keywords": [
-        "Node.js",
-        "application",
+        "node",
+        "npm",
         "gene ontology",
         "GO",
-        "amigo",
-        "bbop",
-        "bbopx",
-        "pup-tent"
+        "widget",
+        "experimental"
     ],
     "author": "SJC <sjcarbon@lbl.gov> (http://berkeleybop.org/)",
     "homepage": "http://berkeleybop.org/",
@@ -30,21 +28,14 @@
     "devDependencies": {
         "browserify-shim": "^3.8.6",
         "browserify": "^10.1.3",
-        "chai": "^2.3.0",
         "del": "^1.1.1",
         "express": "3.4.6",
         "gulp": "^3.8.11",
         "gulp-bump": "^0.3.0",
         "gulp-git": "^1.2.3",
         "gulp-jsdoc": "^0.1.4",
-        "gulp-mocha": "^2.0.1",
         "gulp-rename": "^1.2.2",
-        "gulp-sass": "^2.0.1",
-        "gulp-sourcemaps": "^1.5.2",
-        "gulp-uglify": "^1.2.0",
-        "pup-tent": "0.9.6",
-        "vinyl-source-stream": "1.1.0",
-        "watchify": "^3.2.1"
+        "gulp-uglify": "^1.2.0"
     },
     "browserify": {
         "transform": [
