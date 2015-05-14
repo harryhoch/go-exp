@@ -12,3 +12,8 @@ self-contained (unless that is part of the test).
    This is an experiment in using a gulp, npm, and other tools in
    creating and distributing a self-contained JavaScript widget that
    can be consumed by third-parties.
+
+** widget-consumer
+
+   This is a trivial server setup to consume the "widget" via npm/gulp
+   management.

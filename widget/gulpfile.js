@@ -81,18 +81,24 @@ gulp.task('publish-npm', function() {
     });
 });
 
-gulp.task('git-tag-commit', function(){
+gulp.task('git-commit', function(){
     // Make a note in the git repo.
     var pkg = require('./package.json');
     var pver = pkg.version;
-    return gulp.src('./*')
-	.tag('go-exp-widget-' + pver, 'version message', function (err) {
-	    if (err) throw err;
-	})
-	.pipe(git.commit('Package/version tracking for go-exp/widget: ' + pver));
+    git.commit('Package/version tracking for go-exp/widget: ' + pver,
+	       {args: '-a'});
 });
 
-gulp.task('release', ['bundle', 'publish-npm', 'git-tag-commit']);
+gulp.task('git-tag', function(){
+    // Make a note in the git repo.
+    var pkg = require('./package.json');
+    var pver = pkg.version;
+    git.tag('go-exp-widget-' + pver, 'version message', function (err){
+	if(err) throw err;
+    });
+});
+
+gulp.task('release', ['build', 'publish-npm', 'git-commit', 'git-tag']);
 
 // The default task (called when you run `gulp` from cli)
 //gulp.task('default', ['watch', 'scripts', 'images']);
