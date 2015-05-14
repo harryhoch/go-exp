@@ -16,7 +16,7 @@ var jQuery = require('jquery');
  *
  * @param {String} element_id; must be resolvable by jQuery.
  */
-//module.exports = function(element_id){
+module.exports = function(element_id){
 
     var anchor = this;
 
@@ -48,4 +48,4 @@ var jQuery = require('jquery');
 	    console.log('From widget (skelter): "' + s + '"');
 	});
     };
-//};
+};

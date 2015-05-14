@@ -21,13 +21,7 @@ var paths = {
 };
 
 // Browser runtime environment construction.
-gulp.task('build', ['patch-bump', 'doc', 'browserify', 'compress']);
-
-// Build docs directory with JSDoc.
-gulp.task('doc', function() {
-    gulp.src(paths.docable)
-        .pipe(jsdoc('./doc'));
-});
+gulp.task('build', ['patch-bump', 'doc']);
 
 gulp.task('patch-bump', function(){
     gulp.src('./package.json')
@@ -35,42 +29,51 @@ gulp.task('patch-bump', function(){
 	.pipe(gulp.dest('./'));
 });
 
-// See what browserify-shim is up to.
-process.env.BROWSERIFYSHIM_DIAGNOSTICS = 1;
-gulp.task('browserify', function() {
-    return browserify()
-	.bundle()
-    //Pass desired output filename to vinyl-source-stream
-	.pipe(source('./lib/widget.js'))
-	.pipe(rename('widget.js'))
-    // Start piping stream to tasks!
-	.pipe(gulp.dest('./dist/'));
+// Build docs directory with JSDoc.
+gulp.task('doc', function() {
+    gulp.src(paths.docable)
+        .pipe(jsdoc('./doc'));
 });
 
-gulp.task('compress', function() {
-  return gulp.src('./dist/widget.js')
-	.pipe(rename('widget.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('./dist/'));
-});
+// // See what browserify-shim is up to.
+// process.env.BROWSERIFYSHIM_DIAGNOSTICS = 1;
+// gulp.task('browserify', function() {
+//     return browserify()
+// 	.bundle()
+//     //Pass desired output filename to vinyl-source-stream
+// 	.pipe(source('./lib/widget.js'))
+// 	.pipe(rename('widget.js'))
+//     // Start piping stream to tasks!
+// 	.pipe(gulp.dest('./dist/'));
+// });
 
-// 
-gulp.task('clean', function(cb) {
-    del(['./dist/*', '!./dist/README.org',
-	 './doc/*', '!./doc/README.org']);
-});
+// gulp.task('compress', function() {
+//     return gulp.src('./dist/widget.js')
+// 	.pipe(rename('widget.min.js'))
+// 	.pipe(uglify())
+// 	.pipe(gulp.dest('./dist/'));
+// });
 
-// Testing with mocha/chai.
-// NOTE: I'm using chai here.
-gulp.task('test', function() {
-    return gulp.src(paths.tests, { read: false }).pipe(mocha({
-	reporter: 'spec',
-	globals: {
-	    // Use a different should.
-	    should: require('chai').should()
-	}
-    }));
-});
+// // 
+// gulp.task('clean', function(cb) {
+//     del(['./dist/*', '!./dist/README.org',
+// 	 './doc/*', '!./doc/README.org']);
+// });
+
+// // Testing with mocha/chai.
+// // NOTE: I'm using chai here.
+// gulp.task('test', function() {
+//     return gulp.src(paths.tests, { read: false }).pipe(mocha({
+// 	reporter: 'spec',
+// 	globals: {
+// 	    // Use a different should.
+// 	    should: require('chai').should()
+// 	}
+//     }));
+// });
+
+//gulp.task('release', ['build', 'publish-npm', 'git-commit', 'git-tag']);
+gulp.task('release', ['build', 'publish-npm']);
 
 // Needs to have ""
 gulp.task('publish-npm', function() {
@@ -99,9 +102,6 @@ gulp.task('git-tag', function(){
 	if(err) throw err;
     });
 });
-
-//gulp.task('release', ['build', 'publish-npm', 'git-commit', 'git-tag']);
-gulp.task('release', ['build', 'publish-npm']);
 
 // The default task (called when you run `gulp` from cli)
 //gulp.task('default', ['watch', 'scripts', 'images']);
