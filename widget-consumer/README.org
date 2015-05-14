@@ -1,0 +1,18 @@
+* Overview
+
+A minimal app--just enough to demonstrate delivering go-exp-widget (a
+jQuery using widget) using npm + gulp + browserify.
+
+** As server
+
+  : npm install
+  : node
+  : var g = require('go-exp-widget');
+  : g.skelter(['oi', 'boy']);
+
+** As browser client
+
+   : npm install
+   : node ./node_modules/gulp/bin/gulp.js build
+   : node bin/server.js
+   : [browse @ http://localhost:9876]
