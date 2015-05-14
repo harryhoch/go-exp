@@ -72,6 +72,28 @@ gulp.task('test', function() {
     }));
 });
 
+// Needs to have ""
+gulp.task('publish-npm', function() {
+    var npm = require("npm");
+    npm.load(function (er, npm) {
+	// NPM
+	npm.commands.publish();	
+    });
+});
+
+gulp.task('git-tag-commit', function(){
+    // Make a note in the git repo.
+    var pkg = require('./package.json');
+    var pver = pkg.version;
+    return gulp.src('./*')
+	.tag('go-exp-widget-' + pver, 'version message', function (err) {
+	    if (err) throw err;
+	})
+	.pipe(git.commit('Package/version tracking for go-exp/widget: ' + pver));
+});
+
+gulp.task('release', ['bundle', 'publish-npm', 'git-tag-commit']);
+
 // The default task (called when you run `gulp` from cli)
 //gulp.task('default', ['watch', 'scripts', 'images']);
 gulp.task('default', function() {
