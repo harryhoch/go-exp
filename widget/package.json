@@ -1,19 +1,14 @@
 {
-    "name": "hh-exp-widget",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "license": "BSD",
-    "description": "Experimental test widget for the monarch development.",
     "keywords": [
         "node",
         "npm",
         "widget",
         "experimental"
     ],
-    "author": "HSH <harryh@pitt.edu> (http://dbmi.pitt.edu/)",
-    "homepage": "http://monarch-initiative.org/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/harryhoch/go-exp"
     },
     "engines": {
         "node": ">= 0.12.2",
@@ -37,7 +32,6 @@
     "private": false,
     "main": "lib/widget.js",
     "bugs": {
-        "url": "https://github.com/harryhoch/go-exp/issues"
     },
     "directories": {
         "doc": "doc"
