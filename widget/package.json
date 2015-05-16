@@ -1,21 +1,19 @@
 {
-    "name": "go-exp-widget",
+    "name": "hh-exp-widget",
     "version": "0.0.15",
     "license": "BSD",
-    "description": "Experimental test widget for the Gene Ontology.",
+    "description": "Experimental test widget for the monarch development.",
     "keywords": [
         "node",
         "npm",
-        "gene ontology",
-        "GO",
         "widget",
         "experimental"
     ],
-    "author": "SJC <sjcarbon@lbl.gov> (http://berkeleybop.org/)",
-    "homepage": "http://berkeleybop.org/",
+    "author": "HSH <harryh@pitt.edu> (http://dbmi.pitt.edu/)",
+    "homepage": "http://monarch-initiative.org/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/geneontology/go-exp"
+        "url": "https://github.com/harryhoch/go-exp"
     },
     "engines": {
         "node": ">= 0.12.2",
@@ -39,7 +37,7 @@
     "private": false,
     "main": "lib/widget.js",
     "bugs": {
-        "url": "https://github.com/geneontology/go-exp/issues"
+        "url": "https://github.com/harryhoch/go-exp/issues"
     },
     "directories": {
         "doc": "doc"

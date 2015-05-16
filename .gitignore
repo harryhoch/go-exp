@@ -5,6 +5,8 @@
 /widget/doc
 !/widget/doc/README.org
 
+npm-debug.log
+
 ## Node modules are handled by "npm install" and out of package.json
 node_modules
 
