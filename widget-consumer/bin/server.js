@@ -1,6 +1,6 @@
 
 // Demonstrate the server usability of the go-exp-widget package.
-var widget = require('go-exp-widget');
+var widget = require('hh-exp-widget');
 var w = new widget();
 w.skelter('Hello, World!');
 

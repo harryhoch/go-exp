@@ -1,5 +1,6 @@
 {
-    "version": "0.0.16",
+    "version": "0.0.31",
+    "name": "hh-exp-widget",
     "license": "BSD",
     "keywords": [
         "node",
@@ -8,7 +9,7 @@
         "experimental"
     ],
     "repository": {
-        "type": "git",
+        "type": "git"
     },
     "engines": {
         "node": ">= 0.12.2",
@@ -30,7 +31,7 @@
     },
     "bundleDependencies": [],
     "private": false,
-    "main": "lib/widget.js",
+    "main": "./index",
     "bugs": {
     },
     "directories": {

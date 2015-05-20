@@ -10,7 +10,8 @@
 // Setup the widget's environment.
 var us = require('underscore');
 var jQuery = require('jquery');
-
+var reversemodule = require('./widget/reverse');
+var reverse = reversemodule.reverse;
 /**
  * Object class for our little widget.
  *
@@ -31,6 +32,8 @@ module.exports = function(element_id){
 	if( ! us.isArray(strs) ){ strs = [strs]; }
 
 	us.each(strs, function(s){
+	    s = reverse(s);
+	    console.log(s);
 	    jQuery(element_id).append(s);
 	});
     };
@@ -45,6 +48,7 @@ module.exports = function(element_id){
 	if( ! us.isArray(strs) ){ strs = [strs]; }
 
 	us.each(strs, function(s){
+	    s = reverse(s);
 	    console.log('From widget (skelter): "' + s + '"');
 	});
     };

@@ -1,6 +1,6 @@
 
 var jQuery = require('jquery');
-var widget = require('go-exp-widget');
+var widget = require('hh-exp-widget');
 
 jQuery(document).ready(function(){
 
