@@ -4,7 +4,6 @@
 
 var gulp = require('gulp');
 var jsdoc = require('gulp-jsdoc');
-var mocha = require('gulp-mocha');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
@@ -12,8 +11,6 @@ var rename = require("gulp-rename");
 var git = require('gulp-git');
 var bump = require('gulp-bump');
 var del = require('del');
-var sourcemaps = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
 
 var paths = {
     // tests: ['tests/*.test.js'],
@@ -101,6 +98,14 @@ gulp.task('git-tag', function(){
     git.tag('go-exp-widget-' + pver, 'version message', function (err){
 	if(err) throw err;
     });
+});
+
+gulp.task('browserify',function() {
+    return browserify('entry.js')
+        .bundle()
+        .pipe(source('bundle.js'))
+	.pipe(rename('bundle.js'))
+        .pipe(gulp.dest('./'));
 });
 
 // The default task (called when you run `gulp` from cli)

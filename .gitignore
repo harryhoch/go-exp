@@ -5,6 +5,8 @@
 /widget/doc
 !/widget/doc/README.org
 
+bundle.js
+
 widget-consumer/static
 
 

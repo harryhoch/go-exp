@@ -11,3 +11,12 @@
 
   https://github.com/substack/browserify-handbook#require
   https://github.com/substack/browserify-handbook#exports
+
+
+* To run as standalone
+ 
+   : npm install
+   : gulp browserify 
+   : open 'index.html'
+
+  
