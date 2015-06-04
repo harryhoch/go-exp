@@ -16,6 +16,6 @@ Don't worry if these commands return 'undefined'. That's not a problem.
 ** As browser client
 
    : npm install
-   : node ./node_modules/.bin/gulp build
+   : node ./node_modules/.bin/gulp 
    : node bin/server.js
    : [browse @ http://localhost:9876]

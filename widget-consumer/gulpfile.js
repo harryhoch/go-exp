@@ -74,6 +74,4 @@ gulp.task('compress', function() {
 
 // The default task (called when you run `gulp` from cli)
 //gulp.task('default', ['watch', 'scripts', 'images']);
-gulp.task('default', function() {
-    console.log("'allo 'allo!");
-});
+gulp.task('default', ['build','compress']);
