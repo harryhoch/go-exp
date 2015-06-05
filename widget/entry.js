@@ -1,4 +1,5 @@
 var  $= require('jquery');
+require('tipso');
 require('jquery-ui');
 
 
@@ -14,4 +15,6 @@ $(document).ready(function(){
     ]);
     $("input").autocomplete({ source: ['jquery', 'mootools', 'underscore']});
     $("#slider").slider();
+
+    $('.title-tipso').tipso();
 });

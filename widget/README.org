@@ -13,10 +13,23 @@
   https://github.com/substack/browserify-handbook#exports
 
 
+  On getting the jquery pieces to work:
+
+http://blog.npmjs.org/post/112064849860/using-jquery-plugins-with-npm
+http://blog.npmjs.org/post/112712169830/making-your-jquery-plugin-work-better-with-npm
+
+Note that using jquery-ui widgets requires peeking into and grabbing
+the css from the node_modules pages, and using the tipso widget
+requires changing js code.
+
+
+
 * To run as standalone
  
    : npm install
-   : gulp browserify 
+   : gulp browserify
+   : npm run build
    : open 'index.html'
 
-  
+
+

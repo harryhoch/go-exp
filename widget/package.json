@@ -20,6 +20,7 @@
     "jquery": "2.1.4",
     "jquery-ui": "^1.10.5",
     "parcelify": "^1.1.1",
+    "tipso": "^1.0.5",
     "underscore": "1.8.3",
     "vinyl-buffer": "^1.0.0"
   },
@@ -55,13 +56,15 @@
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
-    "jquery-ui": "./node_modules/jquery-ui/jquery-ui.js"
+    "jquery-ui": "./node_modules/jquery-ui/jquery-ui.js",
+    "tipso": "./node_modules/tipso/src/tipso.js"
   },
   "browserify-shim": {
     "jquery": "$"
   },
   "style": [
     "./node_modules/jquery-ui/themes/base/jquery-ui.css",
-    "./node_modules/jquery-ui/themes/base/jquery.ui.slider.css"
+      "./node_modules/jquery-ui/themes/base/jquery.ui.slider.css",
+      "./node_modules/tipso/src/tipso.min.css"
   ]
 }
