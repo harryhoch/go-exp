@@ -10,6 +10,7 @@ var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 var git = require('gulp-git');
 var bump = require('gulp-bump');
+var parcelify = require('parcelify');
 var del = require('del');
 
 var paths = {
@@ -78,7 +79,7 @@ gulp.task('publish-npm', function() {
     npm.load(function (er, npm) {
 	// NPM
 	npm.commands.publish();	
-    });
+b    });
 });
 
 gulp.task('git-commit', function(){
@@ -110,6 +111,6 @@ gulp.task('browserify',function() {
 
 // The default task (called when you run `gulp` from cli)
 //gulp.task('default', ['watch', 'scripts', 'images']);
-gulp.task('default', function() {
-    console.log("'allo 'allo!");
-});
+
+
+gulp.task('default', ['browserify','parcelify']);

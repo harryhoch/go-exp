@@ -1,7 +1,9 @@
-global.jQuery = require('jquery');
+var  $= require('jquery');
+require('jquery-ui');
+
 var widget = require('./lib/widget');
 
-jQuery(document).ready(function(){
+$(document).ready(function(){
 
     var w = new widget('#foo');
     w.helter([
@@ -9,4 +11,6 @@ jQuery(document).ready(function(){
 	'<br/>',
 	'boingo!'
     ]);
+    $("input").autocomplete({ source: ['jquery', 'mootools', 'underscore']});
+    $("#slider").slider();
 });
