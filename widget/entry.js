@@ -1,6 +1,7 @@
 var  $= require('jquery');
 require('jquery-ui');
 
+
 var widget = require('./lib/widget');
 
 $(document).ready(function(){

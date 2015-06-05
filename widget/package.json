@@ -19,10 +19,13 @@
     "browserify-shim": "^3.8.7",
     "jquery": "2.1.4",
     "jquery-ui": "^1.10.5",
-    "underscore": "1.8.3"
+    "parcelify": "^1.1.1",
+    "underscore": "1.8.3",
+    "vinyl-buffer": "^1.0.0"
   },
   "devDependencies": {
     "browserify": "^10.2.3",
+    "browserify-css": "^0.6.1",
     "del": "^1.1.1",
     "express": "3.4.6",
     "gulp": "^3.8.11",
@@ -42,7 +45,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify entry.js -o bundle.js -p [ parcelify -o bundle.css]"
   },
   "browserify": {
     "transform": [

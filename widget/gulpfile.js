@@ -12,6 +12,7 @@ var git = require('gulp-git');
 var bump = require('gulp-bump');
 var parcelify = require('parcelify');
 var del = require('del');
+var buffer =  require('vinyl-buffer');
 
 var paths = {
     // tests: ['tests/*.test.js'],
@@ -105,7 +106,15 @@ gulp.task('browserify',function() {
     return browserify('entry.js')
         .bundle()
         .pipe(source('bundle.js'))
+        .pipe(buffer())
 	.pipe(rename('bundle.js'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('parcelify',function() {
+    return browserify('entry.js')
+        .bundle()
+        .pipe(source('bundle.css'))
         .pipe(gulp.dest('./'));
 });
 

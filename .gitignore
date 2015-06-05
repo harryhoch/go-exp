@@ -6,6 +6,8 @@
 !/widget/doc/README.org
 
 bundle.js
+bundle.css
+
 
 widget-consumer/static
 
