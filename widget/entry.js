@@ -1,7 +1,7 @@
 var  $= require('jquery');
 require('tipso');
 require('jquery-ui');
-
+require('./lib/pb');
 var widget = require('./lib/widget');
 
 $(document).ready(function(){
@@ -17,28 +17,26 @@ $(document).ready(function(){
 
     $('.title-tipso').tipso();
 
-    bar = $( "<div></div>" )
+    var bar = $( "<div></div>" )
 	.appendTo( "body" )
-	.progressbar({
+	.rogressbar({
             complete: function( event, data ) {
 		alert( "Callbacks are great!" );
             }
 	})
-	.bind( "progressbarcomplete", function( event, data ) {
+	.bind( "rogressbarcomplete", function( event, data ) {
             alert( "Events bubble and support many handlers for extreme flexibility." );
             alert( "The progress bar value is " + data.value );
 	});
     
-    bar.progressbar( "option", "value", 100 );var bar = $( "<div></div>" )
-	.appendTo( "body" )
-	.progressbar({ value: 20 });
+    bar.rogressbar("value",100);
     
     // Get the current value.
-    alert( bar.progressbar( "value" ) );
+    alert( bar.rogressbar("value"));
     
     // Update the value.
-    bar.progressbar( "value", 50 );
+    bar.rogressbar("value", 50 );
     
     // Get the current value again.
-    alert( bar.progressbar( "value" ) );
+    alert(bar.rogressbar("value"));
 });
